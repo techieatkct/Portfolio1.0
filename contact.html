@@ -90,21 +90,21 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form class="row contact_form" id=contactform>
+                        <form class="row contact_form" id="contactform" action="https://formspree.io/f/xpzeqryr"method="POST">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name"  placeholder="Enter your name">
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Enter your name" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email"  placeholder="Enter email address">
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Enter email address" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="subject"  placeholder="Enter Subject">
+                                    <input type="text" class="form-control" id="subject" name="Subject" placeholder="Enter Subject" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control"  id="message" rows="1" placeholder="Enter Message"></textarea>
+                                    <textarea class="form-control"  id="message" rows="1" placeholder="Enter Message" name="message" required></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12 text-right">
@@ -112,7 +112,6 @@
                             </div>
                         </form>
                     </div>
-                    <div class="alert">Registration Successful</div>
             </div>
             <style>
                 .alert{
@@ -126,6 +125,14 @@
                 display: none;
                 }
             </style>
+            <script>
+        function resetForm(){
+          document.getElementById("contactform").reset();
+        }
+
+        window.onload = resetForm;
+        </script>
+
         </section>
         <a id="back2Top" title="Back to top" href="#">&#10148;</a>
         <footer class="footer_area p_120">
